@@ -1,0 +1,2 @@
+turtlesim_test/lab_msgs
+-DCATKIN_DEVEL_PREFIX=/home/cristian/ros/laboratorios_ws/devel -DCMAKE_INSTALL_PREFIX=/home/cristian/ros/laboratorios_ws/install -G Unix Makefiles

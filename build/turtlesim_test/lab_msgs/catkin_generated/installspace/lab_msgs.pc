@@ -1,0 +1,8 @@
+prefix=/home/cristian/ros/laboratorios_ws/install
+
+Name: lab_msgs
+Description: Description of lab_msgs
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs

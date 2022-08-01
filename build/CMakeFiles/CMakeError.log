@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/cristian/ros/laboratorios_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_efe83/fast"
+/usr/bin/make -f CMakeFiles/cmTC_efe83.dir/build.make CMakeFiles/cmTC_efe83.dir/build
+make[1]: se entra en el directorio '/home/cristian/ros/laboratorios_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_efe83.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_efe83.dir/CheckSymbolExists.c.o   -c /home/cristian/ros/laboratorios_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_efe83
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_efe83.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_efe83.dir/CheckSymbolExists.c.o  -o cmTC_efe83 -rdynamic 
+CMakeFiles/cmTC_efe83.dir/CheckSymbolExists.c.o: En la función `main':
+CheckSymbolExists.c:(.text+0x16): referencia a `pthread_create' sin definir
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_efe83.dir/build.make:97: fallo en las instrucciones para el objetivo 'cmTC_efe83'
+make[1]: *** [cmTC_efe83] Error 1
+make[1]: se sale del directorio '/home/cristian/ros/laboratorios_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: fallo en las instrucciones para el objetivo 'cmTC_efe83/fast'
+make: *** [cmTC_efe83/fast] Error 2
+
+File /home/cristian/ros/laboratorios_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/cristian/ros/laboratorios_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2155d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2155d.dir/build.make CMakeFiles/cmTC_2155d.dir/build
+make[1]: se entra en el directorio '/home/cristian/ros/laboratorios_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2155d.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2155d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2155d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2155d.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_2155d.dir/CheckFunctionExists.c.o  -o cmTC_2155d -rdynamic -lpthreads 
+/usr/bin/ld: no se puede encontrar -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_2155d.dir/build.make:97: fallo en las instrucciones para el objetivo 'cmTC_2155d'
+make[1]: *** [cmTC_2155d] Error 1
+make[1]: se sale del directorio '/home/cristian/ros/laboratorios_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: fallo en las instrucciones para el objetivo 'cmTC_2155d/fast'
+make: *** [cmTC_2155d/fast] Error 2
+
+
